@@ -14,7 +14,7 @@ export class AddTaskComponent implements OnInit {
   // When working with forms each field needs a property
   text: string;
   day: string;
-  reminder: boolean = false;
+  reminder: boolean;
   showAddTask: boolean;
   subscription: Subscription;
 

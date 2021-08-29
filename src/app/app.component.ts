@@ -8,7 +8,4 @@ import { Component } from '@angular/core'; // Every Angular component requires t
 })
 
 // Properties and methods go in this class. Kind of like React class-based components
-export class AppComponent {
-  // You should add data type to your properties
-  title: string = 'Task Tracker';
-}
+export class AppComponent {}

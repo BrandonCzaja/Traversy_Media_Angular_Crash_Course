@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  // You should add data type to your properties
+  title: string = 'Task Tracker';
+
   constructor() {}
 
   // Lifecycle method - Similar to useEffect()

@@ -1,5 +1,6 @@
 import { Task } from './Task';
 
+// Tasks data type is Task, which is an array
 export const TASKS: Task[] = [
   {
     id: 1,

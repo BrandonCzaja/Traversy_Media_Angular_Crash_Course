@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TASKS } from '../../mock-tasks';
-import { Task } from '../../Task';
+import { Task } from '../../Task'; // Interface
 
 @Component({
   selector: 'app-tasks',

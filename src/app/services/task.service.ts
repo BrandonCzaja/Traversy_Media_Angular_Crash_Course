@@ -8,11 +8,14 @@ import { Task } from '../Task';
   providedIn: 'root',
 })
 export class TaskService {
-  constructor() {}
+  // API Url
+  private apiUrl = 'http://localhost:5000/tasks';
 
-  // Type => Task[]
+  // the param allows for this.http
+  constructor(private http: HttpClient) {}
+
+  // to fix the "not observable" error I have to use the <> after get
   getTasks(): Observable<Task[]> {
-    const tasks = of(TASKS);
-    return tasks;
+    return this.http.get<Task[]>(this.apiUrl);
   }
 }

@@ -1,18 +1,48 @@
 <form class="add-form">
   <div class="form-control">
     <label for="text">Task</label>
-    <input type="text" name="text" id="text" placeholder="Add Task" />
+    <input
+      type="text"
+      name="text"
+      [(ngModel)]="text"
+      id="text"
+      placeholder="Add Task"
+    />
   </div>
 
   <div class="form-control">
     <label for="day">Day & Time</label>
-    <input type="text" name="day" id="day" placeholder="Add Day and Time" />
+    <input
+      type="text"
+      name="day"
+      [(ngModel)]="day"
+      id="day"
+      placeholder="Add Day and Time"
+    />
   </div>
 
   <div class="form-control form-control-check">
     <label for="reminder">Set Reminder</label>
-    <input type="checkbox" name="reminder" id="reminder" />
+    <input
+      type="checkbox"
+      name="reminder"
+      [(ngModel)]="reminder"
+      id="reminder"
+    />
   </div>
 
   <input type="submit" value="Save Task" class="btn btn-block" />
 </form>
+
+<!-- 
+    
+---- DATA BINDING WITH FORMS ----
+    -Refer to the inputs for examples:
+        - Regarding ngModel:
+            - [] === inputs:
+            - () === outputs:
+            - [()] === both/a.k.a. two-way data binding
+
+    - When using [(ngModel)]="<value>" you must have a name attribute of the same <value> in that input
+
+-->

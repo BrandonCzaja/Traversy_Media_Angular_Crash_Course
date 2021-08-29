@@ -14,7 +14,7 @@ export class TasksComponent implements OnInit {
   // Enables this.taskService.<whatever_I_have_in_TaskService> (ie getTasks())
   constructor(private taskService: TaskService) {}
 
-  // Similar to useEffect
+  // .subscribe is kind of like a promise in JS.
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
   }

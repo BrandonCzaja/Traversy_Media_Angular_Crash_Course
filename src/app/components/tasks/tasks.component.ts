@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../../Task'; // Interface
+import { TaskService } from '../../services/task.service'; // To use getTasks()
 
 @Component({
   selector: 'app-tasks',
@@ -7,10 +8,14 @@ import { Task } from '../../Task'; // Interface
   styleUrls: ['./tasks.component.css'],
 })
 export class TasksComponent implements OnInit {
-  // tasks is type Task, which is an array. It is set to the mock data
-  tasks: Task[] = TASKS;
+  // tasks is type Task, which is an array.
+  tasks: Task[] = [];
 
-  constructor() {}
+  // Enables this.taskService.<whatever_I_have_in_TaskService> (ie getTasks())
+  constructor(private taskService: TaskService) {}
 
-  ngOnInit(): void {}
+  // Similar to useEffect
+  ngOnInit(): void {
+    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
+  }
 }

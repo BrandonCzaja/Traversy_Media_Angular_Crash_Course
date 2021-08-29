@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
 }
 
 /*
-
 -- This is what the file looks like upon generation -- 
 
 import { Component, OnInit } from '@angular/core';

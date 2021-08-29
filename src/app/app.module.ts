@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms'; // Two-way data binding
 
 // Components
 import { AppComponent } from './app.component';
@@ -21,7 +22,7 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
     TaskItemComponent,
     AddTaskComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule, HttpClientModule],
+  imports: [BrowserModule, FontAwesomeModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

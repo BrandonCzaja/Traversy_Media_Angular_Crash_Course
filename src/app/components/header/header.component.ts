@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit {
   // You should add data type to your properties
   title: string = 'Task Tracker';
-  showAddTask: boolean = true;
+  showAddTask: boolean;
   subscription: Subscription;
 
   // In order to use a Service it has to be added to the constructor

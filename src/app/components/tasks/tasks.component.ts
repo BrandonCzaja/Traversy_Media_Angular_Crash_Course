@@ -20,11 +20,18 @@ export class TasksComponent implements OnInit {
   }
 
   // The function calls deleteTask from task.service.ts to delete from the server, then filters the UI
+  // Think of the subscribe as a .then()
   deleteTask(task: Task) {
     this.taskService
       .deleteTask(task)
       .subscribe(
         () => (this.tasks = this.tasks.filter((t) => t.id !== task.id))
       );
+  }
+
+  toggleReminder(task: Task) {
+    // Set reminder to the opposite it is at event trigger
+    task.reminder = !task.reminder;
+    console.log(task.reminder);
   }
 }

@@ -13,6 +13,10 @@ export class HeaderComponent implements OnInit {
 
   // Lifecycle method - Similar to useEffect()
   ngOnInit(): void {}
+
+  toggleAddTask() {
+    console.log('toggle');
+  }
 }
 
 /*
